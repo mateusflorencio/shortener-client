@@ -1,11 +1,26 @@
-import React, { Fragment } from "react";
+import React, { Fragment, useState } from "react";
+import { Navbar, Container, DropdownButton, Dropdown } from "react-bootstrap";
+import "../../../assets/styles/styles.css";
+
+import Logo from "../../../assets/images/logo.png";
 
 export const HeaderLogged = () => {
+  const [user] = useState("Mateus");
   return (
     <Fragment>
       <header>
-        <div>1</div>
-        <div>2</div>
+        <Navbar collapseOnSelect expand="lg" bg="white">
+          <Container>
+            <Navbar.Brand href="/">
+              <img src={Logo} alt="" />{" "}
+            </Navbar.Brand>
+            <DropdownButton id="dropdown-basic-button" title={user}>
+              <Dropdown.Item href="/user/account">Settings</Dropdown.Item>
+              <Dropdown.Divider />
+              <Dropdown.Item href="/">Logout</Dropdown.Item>
+            </DropdownButton>
+          </Container>
+        </Navbar>
       </header>
     </Fragment>
   );
