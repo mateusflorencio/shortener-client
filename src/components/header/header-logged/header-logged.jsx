@@ -15,7 +15,8 @@ export const HeaderLogged = () => {
               <img src={Logo} alt="" />{" "}
             </Navbar.Brand>
             <DropdownButton id="dropdown-basic-button" title={user}>
-              <Dropdown.Item href="/user/account">Settings</Dropdown.Item>
+              <Dropdown.Item href="/user">Settings</Dropdown.Item>
+              <Dropdown.Item href="/shorten">Painel</Dropdown.Item>
               <Dropdown.Divider />
               <Dropdown.Item href="/">Logout</Dropdown.Item>
             </DropdownButton>

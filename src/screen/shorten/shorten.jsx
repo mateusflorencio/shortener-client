@@ -1,11 +1,11 @@
 import React, { Fragment } from "react";
 import { Container } from "react-bootstrap";
 
-import HeaderLogged from "../../../components/header/header-logged";
-import { ShortUrl } from "../../../components/short-url/shortUrl";
-import { ListUrl } from "../../../components/list-url/listUrl";
+import HeaderLogged from "../../components/header/header-logged";
+import { ShortUrl } from "../../components/short-url/shortUrl";
+import { ListUrl } from "../../components/list-url/listUrl";
 
-export const UserHomeScreen = () => {
+export const ShortenScrenn = () => {
   return (
     <Fragment>
       <HeaderLogged />

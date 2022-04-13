@@ -54,6 +54,16 @@ body {
   align-items: center;
   text-align: center;
 }
+.h-100 {
+  height: 100% !important;
+}
+
+.figure-image {
+  height: 180px;
+  width: 171px;
+  border: 1px solid #555555;
+  border-radius: 90px;
+}
 
 @media screen and (max-width: 600px) {
   .form-short {
