@@ -10,7 +10,7 @@ export const UserScreen = () => {
   return (
     <Fragment>
       <HeaderLogged />
-      <section className="body-full">
+      <section className="body-full body-grey-200">
         <Container className="h-100 center">
           <Row className="d-flex  box-form ">
             <h3 className="mb-5">Profile</h3>
