@@ -1,4 +1,4 @@
-import React, { Fragment, useState } from "react";
+import React, { Fragment, useEffect, useState } from "react";
 import { Navbar, Container, DropdownButton, Dropdown } from "react-bootstrap";
 import UserService from "../../../services/users";
 import "../../../assets/styles/styles.css";
@@ -6,7 +6,13 @@ import "../../../assets/styles/styles.css";
 import Logo from "../../../assets/images/logo.png";
 
 export const HeaderLogged = () => {
-  const [user] = useState("Mateus");
+  const [user, setUser] = useState("");
+
+  useEffect(() => {
+    let userLocal = JSON.parse(localStorage.getItem("user"));
+    setUser(userLocal);
+  }, []);
+
   return (
     <Fragment>
       <header>
@@ -15,7 +21,7 @@ export const HeaderLogged = () => {
             <Navbar.Brand href="/">
               <img src={Logo} alt="" />{" "}
             </Navbar.Brand>
-            <DropdownButton id="dropdown-basic-button" title={user}>
+            <DropdownButton id="dropdown-basic-button" title={user.name}>
               <Dropdown.Item href="/user">Settings</Dropdown.Item>
               <Dropdown.Item href="/shorten">Painel</Dropdown.Item>
               <Dropdown.Divider />
