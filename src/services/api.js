@@ -1,7 +1,8 @@
 import axios from "axios";
+const REACT_APP_LINK_API = process.env.REACT_APP_LINK_API;
 
 const Api = axios.create({
-    baseURL: "http://localhost:3030"
+    baseURL: REACT_APP_LINK_API
 });
 
 export default Api;

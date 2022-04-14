@@ -19,6 +19,13 @@ const UserService = {
         });
         localStorage.removeItem("token");
         localStorage.removeItem("user")
+    },
+    update: async (params) => {
+        await Api.put("/users", (params), {
+            headers: {
+                'x-acess-token': localStorage.getItem("token").replace("\"", "")
+            }
+        })
     }
 };
 
