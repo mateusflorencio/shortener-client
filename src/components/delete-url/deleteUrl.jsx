@@ -26,7 +26,7 @@ export const DeleteUrl = (props) => {
       </Modal.Header>
       <Modal.Body>
         <h4>{props.cod}</h4>
-        <p>{props.url}</p>
+        <p className="word-wrap">{props.url}</p>
       </Modal.Body>
       <Modal.Footer>
         <Button onClick={props.onHide}>Close</Button>

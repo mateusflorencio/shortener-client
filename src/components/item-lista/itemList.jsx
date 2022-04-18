@@ -23,7 +23,7 @@ export const ItemList = (props) => {
               <Row className="w-100">
                 {/* column content */}
                 <Col md={8} className="divContent">
-                  <p>{item.url.substring(0, 56)}...</p>
+                  <p className="word-wrap">{item.url}</p>
                   <Link to="">http//:localhost:3030/{item.codUrl}</Link>
                   <p>Date created {item.date_create}</p>
                 </Col>
